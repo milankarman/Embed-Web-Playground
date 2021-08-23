@@ -19,7 +19,7 @@
         <div class="col-6 p-0 d-flex flex-column">
           <div class="row">
             <div class="col-12">
-              <select id="langSelect" class="form-select text-center" onchange="selectLang()">
+              <select id="langSelect" class="form-select text-center rounded-0 border" onchange="selectLang()">
                 <option selected value="html">HTML</option>
                 <option value="css">CSS</option>
               </select>
@@ -27,21 +27,21 @@
           </div>
           <div class="row flex-grow-1">
             <div class="col-12">
-              <textarea class="w-100 h-100 border" id="input-html" oninput="update()"></textarea>
-              <textarea class="w-100 h-100 border" id="input-css" oninput="update()"></textarea>
+              <textarea class="w-100 h-100 border border-top-0" id="input-html" oninput="update()"></textarea>
+              <textarea class="w-100 h-100 border border-top-0" id="input-css" oninput="update()"></textarea>
             </div>
           </div>
         </div>
 
         <div class="col-6 p-0 d-flex flex-column">
           <div class="row m-0">
-            <div class="col-12 border">
+            <div class="col-12 border border-left-0">
               <p class="w-100 mt-1 mb-2 text-center">Result:</p>
             </div>
           </div>
           <div class="row flex-grow-1">
             <div class="col-12">
-              <iframe class="w-100 h-100 p-1 border" id="output"></iframe>
+              <iframe class="w-100 h-100 p-1 border border-top-0 border-left-0" id="output"></iframe>
             </div>
           </div>
         </div>
