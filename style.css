@@ -1,0 +1,9 @@
+textarea {
+    font-family: "Consolas", sans-serif;
+    tab-size: 2;
+}
+
+body {
+    margin :0px;
+    overflow:hidden;
+}
