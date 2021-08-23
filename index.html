@@ -34,9 +34,9 @@
         </div>
 
         <div class="col-6 p-0 d-flex flex-column">
-          <div class="row">
-            <div class="col-12">
-              <h4 class="w-100 text-center">Result:</h4>
+          <div class="row m-0">
+            <div class="col-12 border">
+              <p class="w-100 mt-1 mb-2 text-center">Result:</p>
             </div>
           </div>
           <div class="row flex-grow-1">
@@ -57,18 +57,16 @@
     function start() {
       const urlParams = new URLSearchParams(window.location.search);
 
-      const b64html = urlParams.get("html");
-      const b64css = urlParams.get("css");
+      const htmlParam = urlParams.get("html");
+      const cssParam = urlParams.get("css");
       const lang = urlParams.get("lang");
 
-      if (b64html) {
-        const html = atob(b64html);
-        inputHtml.value = html;
+      if (htmlParam) {
+        inputHtml.value = htmlParam;
       }
 
-      if (b64css) {
-        const css = atob(b64css);
-        inputCss.value = css;
+      if (cssParam) {
+        inputCss.value = cssParam;
       }
 
       if (lang == "html" || lang == "css") {
