@@ -95,7 +95,7 @@ function onClickReset() {
 }
 
 function onClickCreateLink() {
-  let url = window.location.href.split('?')[0];
+  let url = window.location.href.split("?")[0];
 
   url += `?html=${encodeURIComponent(inputHtml.value)}`;
   url += `&css=${encodeURIComponent(inputCss.value)}`;
@@ -107,5 +107,18 @@ function onClickCreateLink() {
   el.select();
 
   document.execCommand("copy");
+  document.body.removeChild(el);
+}
+
+function onClickSave() {
+  const text = `<style>\n${inputCss.value}\n</style>\n${inputHtml.value}`;
+  const el = document.createElement("a");
+
+  el.setAttribute("href", "data:text/html;charset=utf-8," + encodeURIComponent(text));
+  el.setAttribute("download", "site.html");
+  el.style.display = "none";
+
+  document.body.appendChild(el);
+  el.click();
   document.body.removeChild(el);
 }
