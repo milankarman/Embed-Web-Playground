@@ -17,7 +17,7 @@
   <body onload="start()">
     <div class="container-fluid d-flex flex-column overflow-auto flex-fill vh-100 border rounded">
       <div class="row flex-shrink-0 border-bottom">
-        <div class="col-6 px-0 border border-bottom-0 border-left-0 border-top-0">
+        <div class="col-6 px-0 border-end">
           <div class="row m-0">
             <div class="col-11 px-0">
               <select id="langSelect" class="form-select text-center rounded-0 border-0 h-100" onchange="selectLang()">
@@ -32,7 +32,7 @@
         </div>
         <div class="col-6 px-0">
           <div class="row m-0 h-100">
-            <div class="col-12 border-left d-flex flex-column h-100 justify-content-center align-items-center">
+            <div class="col-12 d-flex flex-column h-100 justify-content-center align-items-center">
               <p class="w-100 m-0 mb-1 text-center">Preview</p>
             </div>
           </div>
@@ -40,7 +40,7 @@
       </div>
 
       <div class="row flex-fill">
-        <div class="col-6 p-0 border border-bottom-0 border-left-0 border-top-0 d-flex">
+        <div class="col-6 p-0 d-flex border-end">
           <textarea class="w-100 flex-fill" id="input-html" oninput="update()"></textarea>
           <textarea class="w-100 flex-fill" id="input-css" oninput="update()"></textarea>
         </div>
