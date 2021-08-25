@@ -4,6 +4,17 @@ textarea {
 }
 
 body {
-    margin :0px;
-    overflow:hidden;
+    margin: 0px;
+    overflow: hidden;
+}
+
+select:active, select:hover {
+    outline: none
+}
+
+textarea {
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
 }
