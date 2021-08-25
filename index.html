@@ -10,40 +10,43 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="./style.css" />
     <title>Simple Web Sandbox</title>
   </head>
   <body onload="start()">
-    <div class="container-fluid vh-100">
-      <div class="row h-100">
-        <div class="col-6 p-0 d-flex flex-column">
-          <div class="row">
-            <div class="col-12">
-              <select id="langSelect" class="form-select text-center rounded-0 border" onchange="selectLang()">
+    <div class="container-fluid d-flex flex-column overflow-auto flex-fill vh-100 border rounded">
+      <div class="row flex-shrink-0 border-bottom">
+        <div class="col-6 px-0 border border-bottom-0 border-left-0 border-top-0">
+          <div class="row m-0">
+            <div class="col-11 px-0">
+              <select id="langSelect" class="form-select text-center rounded-0 border-0 h-100" onchange="selectLang()">
                 <option selected value="html">HTML</option>
                 <option value="css">CSS</option>
               </select>
             </div>
-          </div>
-          <div class="row flex-grow-1">
-            <div class="col-12">
-              <textarea class="w-100 h-100 border border-top-0" id="input-html" oninput="update()"></textarea>
-              <textarea class="w-100 h-100 border border-top-0" id="input-css" oninput="update()"></textarea>
+            <div class="col-1 px-0">
+              <button type="button" class="btn btn-danger col-12 rounded-0" onclick="onClickReset()"><i class="las la-undo-alt"></i></button>
             </div>
           </div>
         </div>
+        <div class="col-6 px-0">
+          <div class="row m-0 h-100">
+            <div class="col-12 border-left d-flex flex-column h-100 justify-content-center align-items-center">
+              <p class="w-100 m-0 mb-1 text-center">Preview</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <div class="col-6 p-0 d-flex flex-column">
-          <div class="row m-0">
-            <div class="col-12 border border-left-0">
-              <p class="w-100 mt-1 mb-2 text-center">Result:</p>
-            </div>
-          </div>
-          <div class="row flex-grow-1">
-            <div class="col-12">
-              <iframe class="w-100 h-100 p-1 border border-top-0 border-left-0" id="output"></iframe>
-            </div>
-          </div>
+      <div class="row flex-fill">
+        <div class="col-6 p-0 border border-bottom-0 border-left-0 border-top-0 d-flex">
+          <textarea class="w-100 flex-fill" id="input-html" oninput="update()"></textarea>
+          <textarea class="w-100 flex-fill" id="input-css" oninput="update()"></textarea>
+        </div>
+
+        <div class="col-6 p-0 d-flex">
+          <iframe class="w-100 flex-fill" id="output" hidden></iframe>
         </div>
       </div>
     </div>

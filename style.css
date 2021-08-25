@@ -3,9 +3,8 @@ textarea {
     tab-size: 2;
 }
 
-body {
+html, body {
     margin: 0px;
-    overflow: hidden;
 }
 
 select:active, select:hover {

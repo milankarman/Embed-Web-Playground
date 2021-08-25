@@ -2,11 +2,14 @@ const inputHtml = document.querySelector("#input-html");
 const inputCss = document.querySelector("#input-css");
 const langSelect = document.querySelector("#langSelect");
 
+let htmlParam = "";
+let cssParam = "";
+
 function start() {
   const urlParams = new URLSearchParams(window.location.search);
 
-  const htmlParam = urlParams.get("html");
-  const cssParam = urlParams.get("css");
+  htmlParam = urlParams.get("html");
+  cssParam = urlParams.get("css");
   const lang = urlParams.get("lang");
 
   if (htmlParam) {
@@ -23,6 +26,8 @@ function start() {
 
   selectLang();
   update();
+
+  output.removeAttribute("hidden");
 
   enableTab("#input-html");
   enableTab("#input-css");
@@ -68,4 +73,23 @@ function enableTab(query) {
       return false;
     }
   };
+}
+
+function onClickReset() {
+  lang = langSelect.value;
+
+  switch (lang) {
+    case "html":
+      inputHtml.value = htmlParam;
+      break;
+
+    case "css":
+      inputCss.value = cssParam;
+      break;
+
+    default:
+      break;
+  }
+
+  update();
 }
