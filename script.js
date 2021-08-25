@@ -93,3 +93,19 @@ function onClickReset() {
 
   update();
 }
+
+function onClickCreateLink() {
+  let url = window.location.href.split('?')[0];
+
+  url += `?html=${encodeURIComponent(inputHtml.value)}`;
+  url += `&css=${encodeURIComponent(inputCss.value)}`;
+  url += `&lang=${encodeURIComponent(langSelect.value)}`;
+
+  const el = document.createElement("textarea");
+  document.body.appendChild(el);
+  el.value = url;
+  el.select();
+
+  document.execCommand("copy");
+  document.body.removeChild(el);
+}

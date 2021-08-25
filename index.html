@@ -10,7 +10,7 @@
       integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
     <link rel="stylesheet" href="./style.css" />
     <title>Simple Web Sandbox</title>
   </head>
@@ -18,22 +18,25 @@
     <div class="container-fluid d-flex flex-column overflow-auto flex-fill vh-100 border rounded">
       <div class="row flex-shrink-0 border-bottom">
         <div class="col-6 px-0 border-end">
-          <div class="row m-0">
-            <div class="col-11 px-0">
-              <select id="langSelect" class="form-select text-center rounded-0 border-0 h-100" onchange="selectLang()">
-                <option selected value="html">HTML</option>
-                <option value="css">CSS</option>
-              </select>
-            </div>
-            <div class="col-1 px-0">
-              <button type="button" class="btn btn-danger col-12 rounded-0" onclick="onClickReset()"><i class="las la-undo-alt"></i></button>
-            </div>
-          </div>
+          <select id="langSelect" class="form-select text-center rounded-0 border-0 h-100" onchange="selectLang()">
+            <option selected value="html">HTML</option>
+            <option value="css">CSS</option>
+          </select>
         </div>
         <div class="col-6 px-0">
           <div class="row m-0 h-100">
-            <div class="col-12 d-flex flex-column h-100 justify-content-center align-items-center">
-              <p class="w-100 m-0 mb-1 text-center">Preview</p>
+            <div class="col-10 d-flex flex-column h-100 justify-content-center align-items-center">
+              <p class="w-100 m-0">Preview</p>
+            </div>
+            <div class="col-2 px-0">
+              <div class="btn-group w-100" role="group">
+                <button type="button" class="btn btn-primary col-12 rounded-0" onclick="onClickCreateLink()">
+                  <i class="las la-link"></i>
+                </button>
+                <button type="button" class="btn btn-danger col-12 rounded-0" onclick="onClickReset()">
+                  <i class="las la-undo-alt"></i>
+                </button>
+              </div>
             </div>
           </div>
         </div>
