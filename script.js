@@ -1,6 +1,7 @@
 const inputHtml = document.querySelector("#input-html");
 const inputCss = document.querySelector("#input-css");
 const langSelect = document.querySelector("#langSelect");
+const output = document.querySelector("#output");
 
 let htmlParam = "";
 let cssParam = "";
@@ -101,13 +102,7 @@ function onClickCreateLink() {
   url += `&css=${encodeURIComponent(inputCss.value)}`;
   url += `&lang=${encodeURIComponent(langSelect.value)}`;
 
-  const el = document.createElement("textarea");
-  document.body.appendChild(el);
-  el.value = url;
-  el.select();
-
-  document.execCommand("copy");
-  document.body.removeChild(el);
+  navigator.clipboard.writeText(url)
 }
 
 function onClickSave() {
