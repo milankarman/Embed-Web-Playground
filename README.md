@@ -2,14 +2,14 @@
 
 ## About
 
-This is an easy to use HTML and CSS playground with no bloat and that can easily be embedded. [Visit the online version here](https://milankarman.github.io/Embed-Web-Playground/). 
+This is an easy to use HTML and CSS playground that can easily be embedded. [Visit the online version here](https://milankarman.github.io/Embed-Web-Playground/). 
 
 It has the following features:
 - Realtime updating preview
 - Save as HTML functionality
 - Quick share button
 - Reset to original button
-- Super lightweight
+- Very lightweight
 - Standalone design
 
 This project is designed to work with the online learning system for the school I'm employed for but should work anywhere that allows embeds
