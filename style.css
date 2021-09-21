@@ -1,6 +1,10 @@
 textarea {
     font-family: "Consolas", sans-serif;
     tab-size: 2;
+    border: none;
+    background-color: transparent;
+    resize: none;
+    outline: none;
 }
 
 html, body {
@@ -9,11 +13,4 @@ html, body {
 
 select:active, select:hover {
     outline: none
-}
-
-textarea {
-    border: none;
-    background-color: transparent;
-    resize: none;
-    outline: none;
 }
